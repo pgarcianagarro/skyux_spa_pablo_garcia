@@ -1,0 +1,23 @@
+<div class="highlight-columns">
+  <sky-fluid-grid>
+    <sky-row>
+      <sky-column>
+        <h1>Contacts</h1>
+      </sky-column>
+    </sky-row>
+    <sky-row>
+      <sky-column class="sky-margin-stacked-sm">
+        <a class="sky-btn sky-btn-primary" [routerLink]="['/contactform']">
+          <sky-icon icon="plus-circle"></sky-icon>
+          Add contact
+      </a>
+      </sky-column>
+    </sky-row>
+    <sky-row>
+      <sky-column class="sky-margin-stacked-lg">
+        <ag-grid-angular [gridOptions]="gridOptions" [rowData]="gridData">
+        </ag-grid-angular>
+      </sky-column>
+    </sky-row>
+  </sky-fluid-grid>
+</div>

@@ -1,0 +1,50 @@
+[
+	{
+		"firstName": "Pablo",
+		"lastName": "Garcia",
+		"email": "pablo.garcia@nagarro.com",
+		"dob": "03/22/1987",
+		"address": "Cuautitlán, Estado de México",
+		"contactNo": "5541863994"
+	},
+	{
+		"firstName": "Pedro",
+		"lastName": "Trujillo",
+		"email": "ptrujillo@email.com",
+		"dob": "09/21/1983",
+		"address": "Laredo, Texas",
+		"contactNo": "N/A"
+	},
+	{
+		"firstName": "Mario",
+		"lastName": "Suárez",
+		"email": "mariom@email.com",
+		"dob": "04/21/1979",
+		"address": "Mexicali, BC",
+		"contactNo": "77125012 with his mom"
+	},
+	{
+		"firstName": "David",
+		"lastName": "Jackson",
+		"email": "davidqk@hotmail.com",
+		"dob": "02/17/1988",
+		"address": "México city",
+		"contactNo": "DONT ALLOWED"
+	},
+	{
+		"firstName": "Aaron",
+		"lastName": "Afleck",
+		"email": "aflecka@gmail.com",
+		"dob": "06/13/1966",
+		"address": "Orlando, Florida",
+		"contactNo": "it's not available, only in his email"
+	},
+	{
+		"firstName": "George",
+		"lastName": "Baros",
+		"email": "bg@correo.com",
+		"dob": "04/11/1989",
+		"address": "Toronto, Canada",
+		"contactNo": "+52 45642321321"
+	}
+]
