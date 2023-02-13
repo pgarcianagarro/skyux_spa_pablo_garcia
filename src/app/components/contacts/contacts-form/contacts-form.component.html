@@ -1,0 +1,186 @@
+<div class="highlight-columns mt-3">
+    <sky-fluid-grid>
+        <sky-row>
+            <sky-column [screenMedium]="12">
+                <form [formGroup]="frmContact">
+                    <sky-fluid-grid [disableMargin]="false" gutterSize="small">
+                        <sky-row>
+                            <sky-column [screenSmall]="12">
+                                <h2>New contact form</h2>
+                            </sky-column>
+                        </sky-row>
+                        <sky-row>
+                            <sky-column [screenSmall]="12" [screenMedium]="6">
+                                <sky-input-box class="sky-margin-stacked-lg">
+                                    <label class="sky-control-label" [for]="firstNameInput.id">
+                                    First name
+                                    </label>
+                                    <input
+                                    formControlName="firstName"
+                                    type="text"
+                                    spellcheck="false"
+                                    class="sky-form-control"
+                                    skyId
+                                    #firstNameInput="skyId"
+                                    />
+                                    <span class="sky-error-indicator" skyId #firstNameError="skyId">
+                                        <sky-status-indicator
+                                          *ngIf="
+                                            (firstName.dirty || firstName.touched) &&
+                                            firstName.errors && firstName.errors?.['required']
+                                          "
+                                          indicatorType="danger"
+                                          descriptionType="error"
+                                        >
+                                          First name is required.
+                                        </sky-status-indicator>
+                                      </span>
+                                </sky-input-box>
+                            </sky-column>
+                            <sky-column [screenSmall]="12" [screenMedium]="6">
+                                <sky-input-box class="sky-margin-stacked-lg">
+                                  <label class="sky-control-label" [for]="lastNameInput.id">
+                                    Last name
+                                  </label>
+                                  <input
+                                    formControlName="lastName"
+                                    type="text"
+                                    spellcheck="false"
+                                    class="sky-form-control"
+                                    [attr.aria-describedby]="lastNameError.id"
+                                    skyId
+                                    #lastNameInput="skyId"
+                                  />
+                                  <span class="sky-error-indicator" skyId #lastNameError="skyId">
+                                    <sky-status-indicator
+                                      *ngIf="
+                                        (lastName.dirty || lastName.touched) &&
+                                        lastName.errors && lastName.errors?.['required']
+                                      "
+                                      indicatorType="danger"
+                                      descriptionType="error"
+                                    >
+                                      Last name is required.
+                                    </sky-status-indicator>
+                                  </span>
+                                </sky-input-box>
+                              </sky-column>
+                        </sky-row>
+                        <sky-row>
+                            <sky-column [screenSmall]="12" [screenMedium]="6">
+                                <sky-input-box class="sky-margin-stacked-lg">
+                                  <label class="sky-control-label" [for]="emailInput.id">
+                                    Email address
+                                  </label>
+                                  <input
+                                    class="sky-form-control"
+                                    formControlName="email"
+                                    [attr.aria-describedby]="emailError.id"
+                                    skyId
+                                    #emailInput="skyId"
+                                  />
+                                  <span class="sky-error-indicator" skyId #emailError="skyId">
+                                    <sky-status-indicator
+                                      *ngIf="
+                                        (email.dirty || email.touched) &&
+                                        email.errors && email.errors?.['required']
+                                      "
+                                      indicatorType="danger"
+                                      descriptionType="error"
+                                    >
+                                      Email is required.
+                                    </sky-status-indicator>
+                                    <sky-status-indicator
+                                      *ngIf="
+                                        (email.dirty || email.touched) &&
+                                        email.errors &&
+                                        email.errors?.['skyEmail']
+                                      "
+                                      indicatorType="danger"
+                                      descriptionType="error"
+                                    >
+                                      Enter a valid email in the "joe@abc.com" format.
+                                    </sky-status-indicator>
+                                  </span>
+                                </sky-input-box>
+                              </sky-column>
+                              <sky-column [screenSmall]="12" [screenMedium]="6">
+                                <sky-input-box class="sky-margin-stacked-lg">
+                                  <label class="sky-control-label" [for]="dobInput.id">
+                                    Date of birth
+                                  </label>
+                                  <sky-datepicker>
+                                    <input
+                                      formControlName="dob"
+                                      [attr.aria-describedby]="dobError.id"
+                                      skyId
+                                      #dobInput="skyId"
+                                      skyDatepickerInput
+                                    />
+                                  </sky-datepicker>
+                                  <span class="sky-error-indicator" skyId #dobError="skyId">
+                                    <sky-status-indicator
+                                      *ngIf="
+                                        (dob.dirty || dob.touched) &&
+                                        dob.errors &&
+                                        dob.errors?.['required']
+                                      "
+                                      indicatorType="danger"
+                                      descriptionType="error"
+                                    >
+                                      Date of birth is required.
+                                    </sky-status-indicator>
+                                  </span>
+                                </sky-input-box>
+                              </sky-column>
+                        </sky-row>
+                        <sky-row>
+                            <sky-column [screenSmall]="12" [screenMedium]="6">
+                                <sky-input-box class="sky-margin-stacked-lg">
+                                  <label class="sky-control-label" [for]="contactNoInput.id">
+                                    Contact No
+                                  </label>
+                                  <input
+                                    formControlName="contactNo"
+                                    type="text"
+                                    spellcheck="false"
+                                    class="sky-form-control"
+                                    skyId
+                                    #contactNoInput="skyId"
+                                  />
+                                </sky-input-box>
+                              </sky-column>
+                        </sky-row>
+                        <sky-row>
+                            <sky-column [screenSmall]="12">
+                              <sky-input-box class="sky-margin-stacked-lg">
+                                <label class="sky-control-label" [for]="addressInput.id"> Address </label>
+                                <textarea
+                                  formControlName="address"
+                                  class="sky-form-control"
+                                  skyId
+                                  #addressInput="skyId"
+                                ></textarea>
+                              </sky-input-box>
+                            </sky-column>
+                          </sky-row>
+                        <sky-row>
+                          <sky-column [screenSmall]="3" [screenMedium]="3">
+                              <button  class="sky-btn sky-btn-primary" (click)="saveContact()">
+                                  <sky-icon icon="save"></sky-icon>
+                                  Save
+                              </button>
+                          </sky-column>
+                          <sky-column [screenSmall]="3" [screenMedium]="3">
+                              <a class="sky-btn sky-btn-default" [routerLink]="['/contact']">
+                                  <sky-icon icon="close"></sky-icon>
+                                  Cancel
+                              </a>
+                          </sky-column>
+                        </sky-row>
+                    </sky-fluid-grid>
+                </form>
+            </sky-column>
+        </sky-row>
+    </sky-fluid-grid>
+</div>
